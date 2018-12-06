@@ -26,6 +26,46 @@ ymaps.ready(function() {
 
 $(document).ready(function () {
 
+    // gallery
+    $(function () {
+        $(".js-gallery").on("click", ".equipment-gallery img", function () {
+            var $target = $(this);
+            var $context = $target.parents(".js-gallery");
+            var $mainImage = $context.find(".equipment-show img");
+            $mainImage.attr("src", $target.attr("src"));
+        });
+
+    });
+
+    // gallery
+    $(function () {
+        $(".js-gallery").on("click", ".equipment-gallery span", function () {
+            var $target = $(this).parent().find("img");
+            var $context = $target.parents(".js-gallery");
+            var $mainImage = $context.find(".equipment-show img");
+            // var $currentImage = $target.parent().find("img");
+            $mainImage.attr("src", $target.attr("src"));
+            // $mainImage.attr("src", $currentImage.attr("src"));
+        });
+
+    });
+
+    // анимация шапки при скроле
+    $(function () {
+        $(window).scroll(function(){
+            // $('.header').addClass('scroll');
+            if ($(window).scrollTop()) {
+
+                $('header').addClass('scroll');
+            }
+            else {
+                $('header').removeClass('scroll');
+            }
+        });
+    });
+
+
+
     $('[name="phone"]').inputmask('+7 (999) 999-99-99');
 
 
