@@ -1677,7 +1677,10 @@ header {
   align-items: center;
   flex-wrap: wrap;
   flex-wrap: nowrap;
-  background-color: #f1e9f0; }
+  background-color: #f1e9f0;
+  width: 100%;
+  max-width: 800px;
+  margin: auto; }
   .teacher:after {
     content: "";
     background: url("../img/general/teacherbg.png") no-repeat center;
@@ -1689,10 +1692,10 @@ header {
     bottom: 0; }
   .teacher__img {
     width: 100%;
-    max-width: 340px; }
+    max-width: 200px; }
     .teacher__img img {
       width: 100%;
-      max-width: 340px; }
+      max-width: 200px; }
 
 .teacher-info {
   width: 70%;
